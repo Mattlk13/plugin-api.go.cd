@@ -1,8 +1,6 @@
 # Authorization Plugins
 
-## Current Version
-
-This document is for version 2.0 of the authorization endpoint.
+<%= partial 'includes/shared/extension-info.md.erb', locals: { extension_name: 'authorization', extension_version: '2.0', gocd_version: '19.2.0'} %>
 
 ## Introduction
 
@@ -87,5 +85,3 @@ GoCD administrators could provide multiple authorization configurations to conne
 ```
 
 This is used to define roles in GoCD, unlike the current roles which contains a list of users pluginRole provides configuration to map a GoCD role to a role defined in an external authorization service. e.g pluginRole can be used to define mappings between LDAP group and GoCD roles.
-
-<%= partial 'includes/shared/plugin-structure.md.erb', locals: { plugin_class: 'LdapAuthorizationPlugin', plugin_type: 'authorization', minimum_version: '19.2.0', endpoint_version: '2.0' } %>

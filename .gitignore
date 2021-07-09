@@ -1,6 +1,6 @@
 *.gem
 *.rbc
-.bundle
+.bundle/ruby
 .config
 coverage
 InstalledFiles
@@ -16,12 +16,9 @@ build/
 .cache
 .vagrant
 .sass-cache
-bin/
-.tags
 
 # YARD artifacts
 .yardoc
 _yardoc
 doc/
 .idea/
-vendor/
