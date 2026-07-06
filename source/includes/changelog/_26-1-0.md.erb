@@ -1,0 +1,19 @@
+## Changes in GoCD 26.1.0
+
+No deprecations.
+
+### Logging
+
+Plugins targeting GoCD 26.1.0+ can now provide a logger name via a string; allowing custom log redirectors to be
+written (e.g custom SLF4J implementations which delegate to GoCD's plugin logging API).
+
+```java
+import com.thoughtworks.go.plugin.api.logging.Logger;
+//...
+
+private static final Logger LOG = Logger.getLoggerFor("my-logger", MyPlugin.PLUGIN_ID);
+
+// Rather than one of:
+private static final Logger LOG = Logger.getLoggerFor(MyPlugin.class);
+private static final Logger LOG = Logger.getLoggerFor(MyPlugin.class, MyPlugin.PLUGIN_ID);
+```
